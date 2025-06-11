@@ -27,7 +27,7 @@
       position: absolute;
       width: 20px;
       height: 20px;
-      background: url('https://logopng.com.br/logos/coracao-72.png') no-repeat center/contain;
+      background: url('https://i.imgur.com/5JrL7Yk.png') no-repeat center/contain;
       animation: float 6s linear infinite;
     }
 
@@ -98,28 +98,27 @@
 
     <div class="slider">
       <div class="slides" id="slides">
-        <img src="foto2.jpg" alt="foto2">
-        <img src="foto3.jpg" alt="foto3">
-        <img src="foto4.jpg" alt="foto4">
-        <img src="foto5.jpg" alt="foto5">
-        <img src="foto6.jpg" alt="foto6">
-        <img src="foto7.jpg" alt="foto7">
-        <img src="foto8.jpg" alt="foto8">
-        <img src="foto9.jpg" alt="foto9">
-        <img src="foto10.jpg" alt="foto10">
-        <img src="foto11.jpg" alt="foto11">
-        <img src="foto12.jpg" alt="foto12">
-        <img src="foto13.jpg" alt="foto13">
-        <img src="foto14.jpg" alt="foto14">
-        <img src="foto15.jpg" alt="foto15">
-        <img src="foto16.jpg" alt="foto16">
+        <img src="Imagem do WhatsApp de 2025-06-11 à(s) 18.08.30_ba7cef77.jpg" alt="foto1">
+        <img src="Imagem do WhatsApp de 2025-06-11 à(s) 18.08.30_cccfa5c4.jpg" alt="foto2">
+        <img src="Imagem do WhatsApp de 2025-06-11 à(s) 18.08.31_4f17f42b.jpg" alt="foto3">
+        <img src="Imagem do WhatsApp de 2025-06-11 à(s) 18.08.31_8ce7ccf7.jpg" alt="foto4">
+        <img src="Imagem do WhatsApp de 2025-06-11 à(s) 18.08.31_9df6225e.jpg" alt="foto5">
+        <img src="Imagem do WhatsApp de 2025-06-11 à(s) 18.08.31_36c0b98d.jpg" alt="foto6">
+        <img src="Imagem do WhatsApp de 2025-06-11 à(s) 18.08.31_421a6ff2.jpg" alt="foto7">
+        <img src="Imagem do WhatsApp de 2025-06-11 à(s) 18.08.32_2b1435ee.jpg" alt="foto8">
+        <img src="Imagem do WhatsApp de 2025-06-11 à(s) 18.08.32_d17b34f1.jpg" alt="foto9">
+        <img src="Imagem do WhatsApp de 2025-06-11 à(s) 18.08.32_ddee9bf8.jpg" alt="foto10">
+        <img src="Imagem do WhatsApp de 2025-06-11 à(s) 18.08.33_2b2a4bba.jpg" alt="foto11">
+        <img src="Imagem do WhatsApp de 2025-06-11 à(s) 18.08.33_47b43c3d.jpg" alt="foto12">
+        <img src="Imagem do WhatsApp de 2025-06-11 à(s) 18.08.33_49ea84f4.jpg" alt="foto13">
+        <img src="Imagem do WhatsApp de 2025-06-11 à(s) 18.08.33_61a0b45d.jpg" alt="foto14">
+        <img src="Imagem do WhatsApp de 2025-06-11 à(s) 18.08.33_c9aef14c.jpg" alt="foto15">
       </div>
     </div>
 
     <div class="text-section">
-      <h2>Feliz Dia dos Namorados, amor!</h2>
+      <h2>Feliz Dia dos Namorados, amor! 💜</h2>
       <div class="contador" id="contador"></div>
-              <hr>
       <p style="margin-top: 20px; max-width: 400px; margin-inline: auto;">
 Estamos novamente juntas minha vida, 
 dando mais uma chance para o nosso amor. 
@@ -132,6 +131,47 @@ Eu amor estar com você e é aqui, no teu abraço, que tudo faz sentido. Te amo 
   </div>
 
   <script>
+    // Contador de tempo juntos EXATAMENTE KKKKKKKKK
+    const inicio = new Date("2022-11-14T22:00:00");
+    const contador = document.getElementById("contador");
+
+    function atualizarContador() {
+      const agora = new Date();
+      let diff = agora - inicio;
+
+      const anos = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+      diff -= anos * (1000 * 60 * 60 * 24 * 365.25);
+
+      const meses = Math.floor(diff / (1000 * 60 * 60 * 24 * 30.44));
+      diff -= meses * (1000 * 60 * 60 * 24 * 30.44);
+
+      const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+      diff -= dias * (1000 * 60 * 60 * 24);
+
+      const horas = Math.floor(diff / (1000 * 60 * 60));
+      diff -= horas * (1000 * 60 * 60);
+
+      const minutos = Math.floor(diff / (1000 * 60));
+      diff -= minutos * (1000 * 60);
+
+      const segundos = Math.floor(diff / 1000);
+
+      contador.innerText = `${anos} anos, ${meses} meses, ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos`;
+    }
+
+    setInterval(atualizarContador, 1000);
+    atualizarContador();
+
+    // Slider automático
+    let currentSlide = 0;
+    const slides = document.getElementById("slides");
+    const totalSlides = slides.children.length;
+slides.style.width = `${totalSlides * 300}px`;
+
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      slides.style.transform = `translateX(-${currentSlide * 300}px)`;
+    }, 4000);
 
     // Corações animados
     function criarCoracoes() {
